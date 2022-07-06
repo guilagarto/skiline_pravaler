@@ -4,5 +4,5 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', controller.index);
-
+router.get('/posts', controller.posts);
 module.exports = router;

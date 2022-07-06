@@ -1,4 +1,6 @@
 <footer>
+
+  
     
     <ul class="flex-container flex-container--row">
 
@@ -12,5 +14,18 @@
   
       </ul>
 </footer>
+<script>
+  window.onload = () => {
+    const menu = document.querySelector('header > ul')
+    const menuLinks = menu.querySelectorAll('li a')
+    for(let link of menuLinks) {
+        if(link.getAttribute('href') == window.location.pathname) {
+            link.classList.add('active')
+        } else {
+            link.classList.contains('active') && link.classList.remove('active')
+        }
+    }
+};
+</script>
 </body>
 </html>
